@@ -1,0 +1,84 @@
+.game-footer {
+  background: #1a1a1a;
+  padding: 30px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #ffd700;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s;
+  box-shadow: inset -2px -2px 0 0 #1a1a1a;
+}
+
+.footer-icon:hover {
+  transform: translateY(-2px);
+  background: #444;
+}
+
+.footer-copyright {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}

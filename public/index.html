@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Farm Fun - A Play-to-Earn Farming Game"
+    />
+    <link rel="apple-touch-icon" href="../../assets/background.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>FARM FUN</title>
+    <script>
+      window.addEventListener('error', (event) => {
+        if (event.filename?.includes('content.1.bundle.js') || 
+            event.message?.includes('browser extension')) {
+          event.preventDefault();
+          return false;
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,1126 @@
+/* Pixel Art Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%); */
+  background-image: url('../../assets/bg1.jpg');
+}
+  
+
+
+.content-wrapper {
+  flex: 1;
+  padding: 60px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: linear-gradient(145deg, #8B4513, #654321);
+  border-radius: 16px;
+  border: 4px solid #FFD700;
+  box-shadow: 
+    0 8px 0 rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.1),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Styles */
+.section-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #FFD700 !important;
+  text-shadow: 
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: #FFD700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-subtitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: #4527a0;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.section-text {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #FFE5B4;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.feature-card {
+  background: #8B4513;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 4px solid #FFD700;
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D,
+    0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card h4 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #7e57c2;
+  color: white;
+  border-radius: 50%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pixel-button {
+  padding: 15px 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  background: #8B4513;
+  color: #FFD700;
+  border: 3px solid #FFD700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D;
+}
+
+.pixel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D,
+    0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-button:active {
+  transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .pixel-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 20px 10px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .steps-container {
+    flex-direction: column;
+  }
+
+  .step {
+    min-width: 100%;
+  }
+  
+} 
+
+/* Game Features Section */
+.features-section {
+  padding: 60px 40px;
+  background: linear-gradient(145deg, #8B4513, #654321);
+  border-radius: 16px;
+  border: 4px solid #FFD700;
+  position: relative;
+}
+
+.features-section::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #FFD700, #32CD32);
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.feature-grid-detailed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Feature Item Styling */
+.feature-item {
+  background: rgba(139, 69, 19, 0.9);
+  padding: 30px;
+  position: relative;
+  border: 3px solid #FFD700;
+  border-radius: 12px;
+  box-shadow: 
+    inset -4px -4px 0 0 #4d3319,
+    inset 4px 4px 0 0 #7b5329,
+    0 6px 0 #4d3319;
+  transition: all 0.3s ease;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Pixel Art Border Effect */
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* Feature Icon Styling */
+.feature-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 3px solid #FFD700;
+  border-radius: 12px;
+  box-shadow: 
+    inset -3px -3px 0 0 #4d3319,
+    inset 3px 3px 0 0 #7b5329;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+/* Feature Text Styling */
+.feature-item h4 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #FFD700;
+  text-shadow: 2px 2px 0 #000;
+  margin: 0 0 20px 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.feature-item p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #FFE5B4;
+  text-align: center;
+  margin: 0;
+}
+
+/* Hover Effects */
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    inset -4px -4px 0 0 #4d3319,
+    inset 4px 4px 0 0 #7b5329,
+    0 12px 0 #4d3319,
+    0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.1);
+  animation: iconFloat 2s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1.1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+/* Decorative Corner Elements */
+.feature-item::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFD700,
+    #FFD700 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .feature-grid-detailed {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .feature-item {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-grid-detailed {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .feature-item {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .feature-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Tokenomics Section Enhanced */
+.tokenomics-section {
+  padding: 60px 40px;
+  background: linear-gradient(145deg, #8B4513, #654321);
+  border: 8px solid;
+  border-image-slice: 2;
+  border-width: 4px;
+  border-image-source: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h8v2H6v4H8v2H0V6h2V2H0V0z' fill='%23FFD700'/%3E%3C/svg%3E");
+  border-image-repeat: stretch;
+  position: relative;
+  margin-top: 40px;
+}
+
+.tokenomics-section::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #FFD700, #32CD32);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.5;
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tokenomics Item Enhanced */
+.tokenomics-item {
+  background: rgba(139, 69, 19, 0.8);
+  padding: 25px;
+  border: 4px solid #000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tokenomics-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 48%, #FFD700 49%, #FFD700 51%, transparent 52%) 0 0/10px 10px,
+    linear-gradient(-45deg, transparent 48%, #32CD32 49%, #32CD32 51%, transparent 52%) 0 0/10px 10px;
+  opacity: 0.1;
+}
+
+/* Icon Container Enhanced */
+.tokenomics-icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #FFD700;
+  box-shadow: 
+    inset -2px -2px 0 1px #B8860B,
+    inset 2px 2px 0 1px #FFD700;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.tokenomics-icon::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  transform: translateZ(-1px);
+}
+
+/* Content Styling Enhanced */
+.tokenomics-content {
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.tokenomics-item h4 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #FFD700;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Percentage Bar Enhanced */
+.percentage-bar {
+  height: 24px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #FFD700;
+  position: relative;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.percentage-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  transition: width 1s ease;
+  position: relative;
+}
+
+.percentage-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(
+      45deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 55%
+    );
+  background-size: 10px 10px;
+  animation: progressShine 1s linear infinite;
+}
+
+.percentage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #FFD700;
+  text-shadow: 1px 1px 0 #000;
+  z-index: 2;
+}
+
+.tokenomics-item p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #FFE5B4;
+  text-shadow: 1px 1px 0 #000;
+  margin-top: 15px;
+}
+
+/* Hover Effects Enhanced */
+.tokenomics-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 5px 0 #000,
+    0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.tokenomics-item:hover .tokenomics-icon {
+  transform: translateZ(10px) rotateX(10deg);
+}
+
+.tokenomics-item:hover .percentage-fill {
+  animation: pulseGradient 2s infinite;
+}
+
+/* Animations */
+@keyframes progressShine {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 0; }
+}
+
+@keyframes pulseGradient {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Decorative Elements */
+.tokenomics-item::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFD700,
+    #FFD700 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tokenomics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tokenomics-section {
+    padding: 30px 20px;
+  }
+
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tokenomics-item {
+    min-height: auto;
+  }
+
+  .tokenomics-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .tokenomics-item h4 {
+    font-size: 12px;
+  }
+
+  .percentage-text {
+    font-size: 10px;
+  }
+
+  .tokenomics-item p {
+    font-size: 10px;
+  }
+}
+
+/* Development Roadmap Section */
+.roadmap-section {
+  padding: 60px 40px;
+  background: linear-gradient(145deg, #8B4513, #654321);
+  border: 8px solid;
+  border-image-slice: 2;
+  border-width: 4px;
+  border-image-source: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h8v2H6v4H8v2H0V6h2V2H0V0z' fill='%23FFD700'/%3E%3C/svg%3E");
+  border-image-repeat: stretch;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.roadmap-section::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #FFD700, #32CD32);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.5;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Roadmap Item Styling */
+.roadmap-item {
+  background: rgba(139, 69, 19, 0.8);
+  padding: 25px;
+  border: 3px solid #FFD700;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Font styling untuk semua teks dalam roadmap */
+.roadmap-item h4,
+.phase-tag,
+.roadmap-point,
+.roadmap-point span,
+.bullet,
+.roadmap-list li {
+  font-family: 'Press Start 2P', cursive !important;
+  color: #FFD700 !important;
+}
+
+/* Phase Tag Styling */
+.phase-tag {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Roadmap Title */
+.roadmap-item h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* List Item Styling */
+.roadmap-point {
+  background: rgba(0, 0, 0, 0.3);
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-left: 4px solid #FFD700;
+  display: flex;
+  align-items: center;
+}
+
+.roadmap-point span {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  line-height: 1.8; /* Increased line height for better readability */
+}
+
+.bullet {
+  font-size: 10px;
+  margin-right: 12px; /* Increased spacing between bullet and text */
+}
+
+/* Hover States */
+.roadmap-item:hover {
+  transform: translateY(-5px);
+  border-color: #FFD700;
+  background: rgba(139, 69, 19, 0.9);
+}
+
+.roadmap-point:hover {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateX(5px);
+  border-left-width: 6px;
+}
+
+/* Adjust spacing for better readability */
+.roadmap-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .roadmap-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-section {
+    padding: 30px 20px;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .roadmap-item {
+    min-height: auto;
+  }
+
+  .phase-tag {
+    font-size: 10px;
+  }
+
+  .roadmap-point span {
+    font-size: 9px;
+  }
+}
+
+/* Responsive Design - Large Screens */
+@media (min-width: 1441px) {
+  .content-wrapper {
+    padding: 80px 40px;
+    gap: 100px;
+  }
+
+  .content-container {
+    padding: 80px 60px;
+  }
+
+  .feature-grid-detailed,
+  .roadmap-grid,
+  .tokenomics-grid {
+    gap: 50px;
+  }
+}
+
+/* Responsive Design - Medium Screens */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    padding: 40px 20px;
+    gap: 60px;
+  }
+
+  .content-container {
+    padding: 40px 30px;
+  }
+
+  .feature-grid-detailed,
+  .roadmap-grid,
+  .tokenomics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .features-section,
+  .roadmap-section,
+  .tokenomics-section {
+    padding: 40px 30px;
+  }
+}
+
+/* Responsive Design - Small Screens */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 30px 15px;
+    gap: 40px;
+  }
+
+  .content-container {
+    padding: 30px 20px;
+  }
+
+  .feature-grid-detailed,
+  .roadmap-grid,
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .features-section,
+  .roadmap-section,
+  .tokenomics-section {
+    padding: 30px 20px;
+  }
+
+  .feature-item,
+  .roadmap-item,
+  .tokenomics-item {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .section-title::after {
+    width: 150px;
+  }
+}
+
+/* Responsive Design - Extra Small Screens */
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 20px 10px;
+    gap: 30px;
+  }
+
+  .content-container {
+    padding: 20px 15px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Common Button Styling */
+.pixel-button.primary {
+  background: #8B4513;
+  color: #FFD700;
+  border: 3px solid #FFD700;
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D;
+}
+
+.pixel-button.secondary {
+  background: #654321;
+  color: #FFE5B4;
+  border: 3px solid #FFE5B4;
+  box-shadow: 
+    inset -4px -4px 0 0 #4d3319,
+    inset 4px 4px 0 0 #7b5329;
+}
+
+/* Hover Effects */
+.pixel-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+.feature-item:hover,
+.roadmap-item:hover,
+.tokenomics-item:hover {
+  transform: translateY(-5px);
+  border-color: #FFD700;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Hover effect enhancement */
+.feature-item:hover h4,
+.roadmap-item:hover h4,
+.tokenomics-item:hover h4 {
+  text-shadow: 
+    2px 2px 0 #000,
+    0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.garden-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.garden-plot {
+  background: rgba(139, 69, 19, 0.7);
+  border: 3px solid #FFD700;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plot-status {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: #FFD700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.plant-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+}
+
+.plant-image:hover {
+  transform: scale(1.1);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #98FB98, #32CD32);
+  transition: width 0.3s ease;
+}
+
+.plant-info {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.time-remaining {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #FFD700;
+  margin-top: 15px;
+}
+
+.action-button {
+  background: #4CAF50;
+  color: white;
+  border: 2px solid #FFD700;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Stage indicators */
+.stage-indicator {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFD700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .garden-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .garden-plot {
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .plant-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .action-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+.garden-area {
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+}
+
+.plots-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.plots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  position: relative;
+}

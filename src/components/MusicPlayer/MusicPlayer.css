@@ -1,0 +1,178 @@
+.music-player-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.music-player {
+  background: rgba(26, 26, 26, 0.9);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.music-toggle {
+  width: 70px;
+  height: 70px;
+  border: 4px solid #FFD700;
+  background: #8B4513;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D,
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  position: relative;
+}
+
+.music-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.music-label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: #FFD700;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.music-toggle:hover {
+  transform: translateY(-2px);
+  background: #A0522D;
+}
+
+.music-toggle:active {
+  transform: translateY(1px);
+}
+
+.music-toggle.disabled {
+  background: #654321;
+  opacity: 0.7;
+  cursor: not-allowed;
+  border-color: #B8860B;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #FFD700; }
+  50% { box-shadow: 0 0 20px #FFD700; }
+  100% { box-shadow: 0 0 5px #FFD700; }
+}
+
+.music-toggle:not(.disabled) {
+  animation: glow 2s infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .music-toggle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .music-icon {
+    font-size: 24px;
+  }
+  
+  .music-label {
+    font-size: 8px;
+  }
+}
+
+.music-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.music-prompt-content {
+  background: #8B4513;
+  padding: 30px;
+  border: 4px solid #FFD700;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 
+    inset -4px -4px 0 0 #654321,
+    inset 4px 4px 0 0 #A0522D,
+    0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 90%;
+  cursor: default;
+  position: relative;
+  z-index: 10000;
+}
+
+.music-prompt-content h3 {
+  color: #FFD700;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #000; 
+}
+
+.music-prompt-content p {
+  color: #FFE5B4;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.music-prompt-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+  z-index: 10001;
+}
+
+.prompt-button {
+  padding: 12px 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border: 3px solid #FFD700;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 10001;
+}
+
+.prompt-button.yes {
+  background: #006400;
+  color: #FFD700;
+  pointer-events: auto;
+}
+
+.prompt-button.no {
+  background: #8B0000;
+  color: #FFD700;
+  pointer-events: auto;
+}
+
+.prompt-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prompt-button:active {
+  transform: translateY(1px);
+}
+ 
